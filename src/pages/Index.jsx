@@ -12,7 +12,7 @@ const Index = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://mnwefvnykbgyhbdzpleh.supabase.co/api/auth/v1/token?grant_type=password", {
+      const response = await fetch("https://mnwefvnykbgyhbdzpleh.supabase.co/auth/v1/token?grant_type=password", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
