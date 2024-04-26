@@ -13,7 +13,7 @@ function Home() {
 
   const fetchNotes = async () => {
     try {
-      const response = await fetch("https://mnwefvnykbgyhbdzpleh.supabase.co/notes", {
+      const response = await fetch("https://mnwefvnykbgyhbdzpleh.supabase.co/api/notes", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
