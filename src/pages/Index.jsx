@@ -1,4 +1,5 @@
 import { Box, Button, FormControl, FormLabel, Input, VStack, useToast } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import { FaSignInAlt } from "react-icons/fa";
 import { useState } from "react";
 
@@ -6,6 +7,7 @@ const Index = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const toast = useToast();
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -28,6 +30,7 @@ const Index = () => {
           duration: 9000,
           isClosable: true,
         });
+        navigate("/home");
       } else {
         throw new Error(data.error_description || "Failed to login");
       }
